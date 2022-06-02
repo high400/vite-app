@@ -21,14 +21,53 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
     </div>
   </div>
   <div class="second">
-    <div class="item-zone"></div>
+    <div class="item-zone">
+      <ul class="divide-y divide-gray-200">
+        <li v-for="person in people" :key="person.email" class="py-4 flex">
+          <img class="h-10 w-10 rounded-full" :src="person.image" alt="" />
+          <div class="ml-3">
+            <p class="text-sm font-medium text-gray-900">{{ person.name }}</p>
+            <p class="text-sm text-gray-500">{{ person.email }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="content-zone"></div>
     <div class="edit-zone"></div>
   </div>
 </template>
 <!-- This is where we write our templates -->
 <!-- This is where you write the script for JSON standards -->
-<script></script>
+<script>
+const people = [
+  {
+    name: "Calvin Hawkins",
+    email: "calvin.hawkins@example.com",
+    image:
+      "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "Kristen Ramos",
+    email: "kristen.ramos@example.com",
+    image:
+      "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "Ted Fox",
+    email: "ted.fox@example.com",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+];
+
+export default {
+  setup() {
+    return {
+      people,
+    };
+  },
+};
+</script>
 <!-- This is where you write the script for JSON standards -->
 <!-- This is where you style your file -->
 <style>
@@ -44,15 +83,13 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
   width: 100%;
   height: 100px;
   background-color: #2c3e50;
-  
 }
 .letter {
   float: left;
 }
 .empty {
-  
-  width: 20%; 
-  
+  width: 20%;
+  text-align: center;
 }
 .btn {
   float: right;
@@ -62,9 +99,28 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 /* This is for the div named "all" */
 /* This is for the div named "second" */
 .second {
+  position: relative;
   width: 100%;
+  height: 500px;
+  background-color: #a9a9a9;
+}
+.item-zone {
+  float: left;
+  width: 10%;
+  height: 500px;
+  background-color: #808000; 
+}
+.content-zone {
+  width: 10%;
+  height: 500px;
+  float: center;
+  background-color: #a9a9a9;
+}
+.edit-zone {
+  float: right; 
+  width: 10%; 
   height: 500px; 
-  background-color:#a9a9a9;
+  background-color: #ffb6c1;
 }
 /* This is for the div named "second" */
 </style>
