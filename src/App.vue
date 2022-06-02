@@ -23,17 +23,49 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
   <div class="second">
     <div class="item-zone"></div>
     <div class="content-zone">
-      <Content />
+      
     </div>
     <div class="edit-zone"></div>
   </div>
 </template>
 <!-- This is where we write our templates -->
 <!-- This is where you write the script for JSON standards -->
-<script></script>
+<script>
+const content = [
+    {
+         id: '{random_string}',
+         name: 'heading',
+         title: 'Heading Element',
+         settings: {
+             content: 'Enter your heading text',
+             tag: 'h3'
+         },
+         style: {
+            color: 'red',
+            'font-size': '18px'
+         }
+    }, 
+
+]
+
+export default {
+  setup() {
+    return {
+      content,
+    };
+  },
+};
+</script>
+
 <!-- This is where you write the script for JSON standards -->
 <!-- This is where you style your file -->
 <style>
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: auto;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,6 +74,7 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 }
 /* This is for the div named "all" */
 .all {
+  position: relative;
   width: 100%;
   height: 100px;
   background-color: #2c3e50;
@@ -66,16 +99,22 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 /* This is for the div named "all" */
 /* This is for the div named "second" */
 .second {
-  position: relative;
   width: 100%;
   height: 500px;
   background-color: #a9a9a9;
 }
 .item-zone {
-  float: left;
+
   width: 10%;
   height: 500px;
   background-color: #808000;
+  display: inline-block;
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #6b8e23;
+
 }
 .content-zone {
   width: 80%;
