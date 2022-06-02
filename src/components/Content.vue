@@ -4,15 +4,41 @@
   </div>
 </template>
 
+<script>
+const content = [
+    {
+         id: '{random_string}',
+         name: 'heading',
+         title: 'Heading Element',
+         settings: {
+             content: 'Enter your heading text',
+             tag: 'h3'
+         },
+         style: {
+            color: 'red',
+            'font-size': '18px'
+         }
+    }, 
+
+]
+
+export default {
+  setup() {
+    return {
+      content,
+    };
+  },
+};
+</script>
+
 <style>
 .center-text {
-  display: flex;
+  display: inline-block;
   max-width: 24rem;
   margin: 0 auto;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #6b8e23;
+
 }
 </style>
