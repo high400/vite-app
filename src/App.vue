@@ -14,7 +14,7 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
       </div>
       <div class="text-lg">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 rounded px-4"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 rounded px-3"
         >
           Import/Export JSON
         </button>

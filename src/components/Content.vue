@@ -1,17 +1,17 @@
 <template>
   <div class="content h-screen">
     <div class="flex justify-between">
-      <div class="h-screen w-screen">01
-        <div class="drop-zone"></div>
-        <div class="drop-zone"></div>
-        <div class="drop-zone"></div>
+      <div class="h-screen w-screen">
+        <div class="grid grid-cols-3 gap-2">
+          <div>01</div>
+          <div>01</div>
+          <div>01</div>
+          <div>01</div>
+          <div>01</div>
+        </div>
       </div>
       <div class="h-screen w-screen">02</div>
-      <div class="h-screen w-screen">03
-        <div class="edit-zone"></div>
-        <div class="edit-zone"></div>
-        <div class="edit-zone"></div>
-      </div>
+      <div class="h-screen w-screen">03</div>
     </div>
   </div>
 </template>
@@ -38,13 +38,38 @@ export default {
         name: "Featured",
         title: "Featured Element",
         settings: {
-          content: "",
-          tag: "",
+          content: {
+            img: "",
+            text: "",
+            button: "Read More",
+          },
+          tag: {},
         },
         style: {
           color: "blue",
           fontSize: "18px",
         },
+      },
+      {
+        id: 3,
+        name: "testimonial",
+        title: "Testimonial",
+        settings: {},
+        style: {},
+      },
+      {
+        id: 4,
+        name: "collections",
+        title: "Collections",
+        settings: {},
+        style: {},
+      },
+      {
+        id: 5,
+        name: "products",
+        title: "Products",
+        settings: {},
+        style: {},
       },
     ];
 
@@ -57,11 +82,10 @@ export default {
 
 <style>
 .content {
-  background-color: red;
+  background-color: #1E90FF;
 }
-.drop-zone {
-  width: 10px;
-  height: 10px;
-  background-color: black;
+.grid {
+  background-color: #0000FF;
+  height: 25%;
 }
 </style>
