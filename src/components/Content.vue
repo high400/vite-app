@@ -13,7 +13,7 @@ export default {
   setup() {
     const content = [
       {
-        id: "{random_string}",
+        id: 1,
         name: "heading",
         title: "Heading Element",
         settings: {
@@ -25,6 +25,20 @@ export default {
           fontSize: "18px",
         },
       },
+      {
+        id: 2, 
+        name: "Featured", 
+        title: "Featured Element", 
+        settings: {
+          content: "",
+          tag: "",  
+
+        },
+        style: {
+          color: "blue",
+          fontSize: "18px",
+        }
+      }
     ];
 
     return {
