@@ -1,9 +1,17 @@
 <template>
   <div class="content h-screen">
     <div class="flex justify-between">
-      <div class="h-screen">01</div>
-      <div class="h-screen">02</div>
-      <div class="h-screen">03</div>
+      <div class="h-screen w-screen">01
+        <div class="drop-zone"></div>
+        <div class="drop-zone"></div>
+        <div class="drop-zone"></div>
+      </div>
+      <div class="h-screen w-screen">02</div>
+      <div class="h-screen w-screen">03
+        <div class="edit-zone"></div>
+        <div class="edit-zone"></div>
+        <div class="edit-zone"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,19 +34,18 @@ export default {
         },
       },
       {
-        id: 2, 
-        name: "Featured", 
-        title: "Featured Element", 
+        id: 2,
+        name: "Featured",
+        title: "Featured Element",
         settings: {
           content: "",
-          tag: "",  
-
+          tag: "",
         },
         style: {
           color: "blue",
           fontSize: "18px",
-        }
-      }
+        },
+      },
     ];
 
     return {
@@ -51,5 +58,10 @@ export default {
 <style>
 .content {
   background-color: red;
+}
+.drop-zone {
+  width: 10px;
+  height: 10px;
+  background-color: black;
 }
 </style>
