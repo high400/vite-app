@@ -1,15 +1,18 @@
 <template>
-  <div class="container">
-    <div class="flex justify-between ...">
-      <div>01</div>
-      <div>02</div>
-      <div>03</div>
+  <div class="content h-screen ">
+    <div class="flex ">
+      <div class="h-screen">01</div>
+      <div class="h-screen">02</div>
+      <div class="h-screen">03</div>
     </div>
   </div>
 </template>
 
 <script>
-const content = [
+
+export default {
+  setup() {
+    const content = [
   {
     id: "{random_string}",
     name: "heading",
@@ -25,8 +28,6 @@ const content = [
   },
 ];
 
-export default {
-  setup() {
     return {
       content,
     };
@@ -35,8 +36,10 @@ export default {
 </script>
 
 <style>
-.container {
-  background-color: #d2691e;
+
+.content {
+  background-color:red;
 
 }
+
 </style>

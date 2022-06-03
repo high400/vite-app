@@ -1,5 +1,6 @@
 module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: ["./index.html", './pages/**/*.{html,js}',
+  './components/**/*.{html,js}', "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       gridTemplateRows: {
@@ -11,8 +12,6 @@ module.exports = {
       },
     },
     screens: {
-      mobile: "320px",
-      // => @media (min-width: 320px) { ... }
       tablet: "640px",
       // => @media (min-width: 640px) { ... }
       laptop: "1024px",
