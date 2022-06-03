@@ -3,29 +3,23 @@
     <div class="flex justify-between">
       <div class="h-screen w-1/4">
         <div class="grid grid-cols-3 gap-1">
-          <div class="bg-white">01</div>
-          <div class="bg-white">02</div>
-          <div class="bg-white">03</div>
-          <div class="bg-white">04</div>
-          <div class="bg-white">05</div>
+          <div v-for="item in content" :key="item.id" class="bg-white">
+          {{item.title}}
+          </div>
         </div>
       </div>
       <div class="h-screen w-2/4">02</div>
       <div class="h-screen w-1/4">
-        <div class="zone grid grid-cols-3 gap-2">
-          03
-        </div>
+        <div class="zone grid grid-cols-3 gap-2">03</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from "vue";
 export default {
   setup() {
-
-    
     const content = ref([
       {
         id: 1,
@@ -37,7 +31,7 @@ export default {
         },
         style: {
           color: "red",
-          fontSize: "18px",
+          fontSize: "14px",
         },
       },
       {
@@ -54,7 +48,7 @@ export default {
         },
         style: {
           color: "blue",
-          fontSize: "18px",
+          fontSize: "14px",
         },
       },
       {
@@ -79,16 +73,13 @@ export default {
         style: {},
       },
     ]);
-  const getContent = computed({
-    getContent: () => {
-       this.content.value 
-    }
-  }
-  );
+    const getContent = computed({
+      getContent: () => {
+        this.content.value;
+      },
+    });
 
-  onMounted(() => {
-    console.log(content.value);
-  });
+
     return {
       content,
     };
@@ -98,14 +89,14 @@ export default {
 
 <style>
 .content {
-  background-color: #1E90FF;
+  background-color: #1e90ff;
 }
 .grid {
-  background-color: #0000FF;
+  background-color: #0000ff;
   height: 25%;
 }
 .zone {
-  background-color: #2F4F4F;
+  background-color: #2f4f4f;
   height: 25%;
 }
 </style>
