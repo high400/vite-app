@@ -4,23 +4,30 @@
       <div class="h-screen w-1/4">
         <div class="grid grid-cols-3 gap-1">
           <div v-for="item in content" :key="item.id" class="bg-white">
-          {{item.title}}
+            {{ item.title }}
           </div>
         </div>
       </div>
       <div class="h-screen w-2/4">
-        
-        </div>
+        <Center />
+      </div>
       <div class="h-screen w-1/4">
-        <div class="zone grid grid-cols-3 gap-2">03</div>
+        <div class="zone grid grid-cols-3 gap-2">
+          <Right />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Center from "./Center.vue";
+import Right from "./Right.vue";
 import { computed, ref } from "vue";
 export default {
+  components: {
+    Center
+  },
   setup() {
     const content = ref([
       {
@@ -81,7 +88,6 @@ export default {
       },
     });
 
-
     return {
       content,
     };
@@ -91,7 +97,7 @@ export default {
 
 <style>
 .content {
-  background-color: #1e90ff;
+  background-color: #C0C0C0;
 }
 .grid {
   background-color: #0000ff;
