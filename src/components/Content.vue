@@ -1,6 +1,6 @@
 <template>
   <div class="content h-screen">
-    <div class="flex justify-between">
+    <div class="flex gap-2 justify-between">
       <div class="h-screen w-1/4">
         <div class="grid grid-cols-3 gap-1">
           <div v-for="item in content" :key="item.id" class="bg-white">
@@ -8,7 +8,9 @@
           </div>
         </div>
       </div>
-      <div class="h-screen w-2/4">02</div>
+      <div class="h-screen w-2/4">
+        
+        </div>
       <div class="h-screen w-1/4">
         <div class="zone grid grid-cols-3 gap-2">03</div>
       </div>
@@ -17,7 +19,7 @@
 </template>
 
 <script>
-import { computed, onMounted, ref } from "vue";
+import { computed, ref } from "vue";
 export default {
   setup() {
     const content = ref([
