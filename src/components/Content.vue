@@ -3,17 +3,17 @@
     <div class="flex justify-between">
       <div class="h-screen w-1/4">
         <div class="grid grid-cols-3 gap-1">
-          <div class="bg-black h-[80px]">01</div>
-          <div class="bg-black h-[80px]">01</div>
-          <div class="bg-black h-[80px]">01</div>
-          <div class="bg-black h-[80px]">01</div>
-          <div class="bg-black h-[80px]">01</div>
+          <div class="bg-white h-[80px]">01</div>
+          <div class="bg-white h-[80px]">02</div>
+          <div class="bg-white h-[80px]">03</div>
+          <div class="bg-white h-[80px]">04</div>
+          <div class="bg-white h-[80px]">05</div>
         </div>
       </div>
       <div class="h-screen w-2/4">02</div>
       <div class="h-screen w-1/4">
         <div class="zone grid grid-cols-3 gap-2">
-
+          03
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 export default {
   setup() {
 
@@ -79,7 +79,12 @@ export default {
         style: {},
       },
     ]);
-
+  const getContent = computed({
+    getContent: () => {
+       this.content.value 
+    }
+  }
+  );
 
     return {
       content,
