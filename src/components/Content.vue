@@ -21,9 +21,12 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 export default {
   setup() {
-    const content = [
+
+    
+    const content = ref([
       {
         id: 1,
         name: "heading",
@@ -75,7 +78,8 @@ export default {
         settings: {},
         style: {},
       },
-    ];
+    ]);
+
 
     return {
       content,
