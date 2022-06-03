@@ -22,7 +22,7 @@ export default {
         },
         style: {
           color: "red",
-          "font-size": "18px",
+          fontSize: "18px",
         },
       },
     ];
