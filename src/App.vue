@@ -11,7 +11,7 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
     <div class="grid grid-cols-5 gap-28">
       <div class="col-start-1 col-end-1 ...">
         <img src="./assets/Beae.png" /></div>
-      <div class="col-end-6 col-span-1 ...">03</div>
+      <div class="col-end-6 col-span-1 ..."></div>
     </div>
   </div>
   <Content />
