@@ -7,11 +7,18 @@ import Content from "./components/Content.vue";
 Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 <!-- This is where we write our templates -->
 <template>
-  <div class="head">
-    <div class="grid grid-cols-5 gap-28">
-      <div class="col-start-1 col-end-1 ...">
-        <img src="./assets/Beae.png" /></div>
-      <div class="col-end-6 col-span-1 ..."></div>
+  <div class="head py-2 px-2">
+    <div class="flex justify-between items-center">
+      <div class="w-[100px]">
+        <img class="max-w-full" src="./assets/Beae.png" />
+      </div>
+      <div class="text-lg">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 rounded px-4"
+        >
+          Import/Export JSON
+        </button>
+      </div>
     </div>
   </div>
   <Content />
@@ -26,8 +33,8 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 <style>
 * {
   box-sizing: border-box;
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0;
 }
 
 #app {

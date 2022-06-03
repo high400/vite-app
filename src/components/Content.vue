@@ -1,6 +1,6 @@
 <template>
   <div class="content h-screen">
-    <div class="flex">
+    <div class="flex justify-between">
       <div class="h-screen">01</div>
       <div class="h-screen">02</div>
       <div class="h-screen">03</div>
