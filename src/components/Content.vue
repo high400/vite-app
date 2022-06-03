@@ -3,11 +3,11 @@
     <div class="flex justify-between">
       <div class="h-screen w-1/4">
         <div class="grid grid-cols-3 gap-1">
-          <div class="bg-white h-[80px]">01</div>
-          <div class="bg-white h-[80px]">02</div>
-          <div class="bg-white h-[80px]">03</div>
-          <div class="bg-white h-[80px]">04</div>
-          <div class="bg-white h-[80px]">05</div>
+          <div class="bg-white">01</div>
+          <div class="bg-white">02</div>
+          <div class="bg-white">03</div>
+          <div class="bg-white">04</div>
+          <div class="bg-white">05</div>
         </div>
       </div>
       <div class="h-screen w-2/4">02</div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 export default {
   setup() {
 
@@ -86,6 +86,9 @@ export default {
   }
   );
 
+  onMounted(() => {
+    console.log(content.value);
+  });
     return {
       content,
     };
