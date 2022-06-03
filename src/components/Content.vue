@@ -1,17 +1,21 @@
 <template>
   <div class="content h-screen">
     <div class="flex justify-between">
-      <div class="h-screen w-screen">
-        <div class="grid grid-cols-3 gap-2">
-          <div>01</div>
-          <div>01</div>
-          <div>01</div>
-          <div>01</div>
-          <div>01</div>
+      <div class="h-screen w-1/4">
+        <div class="grid grid-cols-3 gap-1">
+          <div class="bg-black h-[80px]">01</div>
+          <div class="bg-black h-[80px]">01</div>
+          <div class="bg-black h-[80px]">01</div>
+          <div class="bg-black h-[80px]">01</div>
+          <div class="bg-black h-[80px]">01</div>
         </div>
       </div>
-      <div class="h-screen w-screen">02</div>
-      <div class="h-screen w-screen">03</div>
+      <div class="h-screen w-2/4">02</div>
+      <div class="h-screen w-1/4">
+        <div class="zone grid grid-cols-3 gap-2">
+
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -86,6 +90,10 @@ export default {
 }
 .grid {
   background-color: #0000FF;
+  height: 25%;
+}
+.zone {
+  background-color: #2F4F4F;
   height: 25%;
 }
 </style>

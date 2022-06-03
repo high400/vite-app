@@ -7,14 +7,14 @@ import Content from "./components/Content.vue";
 Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 <!-- This is where we write our templates -->
 <template>
-  <div class="head py-2 px-2">
+  <div class="head py-2 px-1">
     <div class="flex justify-between items-center">
       <div class="w-[100px]">
         <img class="max-w-full" src="./assets/Beae.png" />
       </div>
       <div class="text-lg">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 rounded px-3"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 rounded px-1"
         >
           Import/Export JSON
         </button>
