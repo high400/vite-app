@@ -105,7 +105,7 @@ export default {
 }
 .zone {
   background-color: #2f4f4f;
-  
+  height: 100%;
 }
 p { 
   font-size: 16px;
