@@ -41,12 +41,12 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  height: 90vh;
   background-color: #C0C0C0;
 }
 .head {
   background-color: #FFFFFF;
-  margin-bottom: 5px;
+  
 }
 </style>
 <!-- This is where you style your file -->
