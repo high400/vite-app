@@ -1,10 +1,10 @@
 <template>
-  <div class="content h-screen">
-    <div class="flex gap-2 justify-between">
+  <div class="content h-screen p-2">
+    <div class="flex gap-1 justify-between">
       <div class="h-screen w-1/4">
-        <div class="grid grid-cols-3 gap-1">
-          <div v-for="item in content" :key="item.id" class="bg-white">
-            {{ item.title }}
+        <div class="grid grid-cols-3 gap-1 p-2 ">
+          <div v-for="item in content" :key="item.id" class="bg-white h-[100px] flex items-center justify-center">
+            <p class="p-2">{{ item.title }}</p>
           </div>
         </div>
       </div>
@@ -12,7 +12,7 @@
         <Center />
       </div>
       <div class="h-screen w-1/4">
-        <div class="zone grid grid-cols-3 gap-2">
+        <div class="zone grid grid-cols-3 gap-1">
           <Right />
         </div>
       </div>
@@ -26,7 +26,7 @@ import Right from "./Right.vue";
 import { computed, ref } from "vue";
 export default {
   components: {
-    Center
+    Center,
   },
   setup() {
     const content = ref([
@@ -95,16 +95,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .content {
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
 }
 .grid {
   background-color: #0000ff;
-  height: 25%;
+  /* height: 25%; */
 }
 .zone {
   background-color: #2f4f4f;
   height: 25%;
+}
+p { 
+  font-size: 16px;
+
 }
 </style>

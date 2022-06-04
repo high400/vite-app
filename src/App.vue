@@ -46,7 +46,7 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 }
 .head {
   background-color: #FFFFFF;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 </style>
 <!-- This is where you style your file -->
