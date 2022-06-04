@@ -12,7 +12,7 @@
         <Center />
       </div>
       <div class="h-screen w-1/4">
-        <div class="zone grid grid-cols-3 gap-1">
+        <div class="zone grid grid-cols-1 gap-1">
           <Right />
         </div>
       </div>
@@ -101,11 +101,11 @@ export default {
 }
 .grid {
   background-color: #0000ff;
-  /* height: 25%; */
+  
 }
 .zone {
   background-color: #2f4f4f;
-  height: 100%;
+  height: 95%;
 }
 p { 
   font-size: 16px;
