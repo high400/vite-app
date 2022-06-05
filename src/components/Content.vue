@@ -12,7 +12,7 @@
         <Center />
       </div>
       <div class="h-screen w-1/4">
-        <div class="zone grid grid-cols-1 gap-1">
+        <div class="zone">
           <Right />
         </div>
       </div>
@@ -27,6 +27,7 @@ import { computed, ref } from "vue";
 export default {
   components: {
     Center,
+    Right, 
   },
   setup() {
     const content = ref([
