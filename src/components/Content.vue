@@ -100,7 +100,7 @@ export default {
   background-color: #c0c0c0;
 }
 .grid {
-  background-color: #0000ff;
+  background-color: #e5e7eb;
   
 }
 .zone {

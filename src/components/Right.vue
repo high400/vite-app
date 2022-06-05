@@ -1,10 +1,13 @@
 <template>
   <h3>{{ settings.content }}</h3>
-  <div v-show="isActive">
-    <slot></slot>
-  </div>
+  <TabWrapper>
+    <Tabs title="Tab 1">Tab 1</Tabs>
+    <Tabs title="Tab 2">Tab 2</Tabs>
+  </TabWrapper>
 </template>
 <script>
+import TabWrapper from "./TabWrapper.vue";
+import Tabs from "./Tabs.vue";
 export default {
   computed: {
     settings() {

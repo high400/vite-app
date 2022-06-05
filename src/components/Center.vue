@@ -10,6 +10,6 @@
 </script>
 <style>
 .middle {
-    background-color: #008000;
+    background-color: white;
 }
 </style>
