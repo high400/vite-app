@@ -1,7 +1,7 @@
 <template>
   <h3>{{ settings.content }}</h3>
-  <div>
-      
+  <div v-show="isActive">
+    <slot></slot>
   </div>
 </template>
 <script>
