@@ -104,6 +104,7 @@ export default {
 
   methods: {
     startDrag(evt, item) {
+      console.log(item)
       evt.dataTransfer.dropEffect = "move";
       evt.dataTransfer.effectAllowed = "move";
       evt.dataTransfer.setData("itemID", item.id);

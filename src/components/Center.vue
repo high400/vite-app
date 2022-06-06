@@ -11,11 +11,12 @@ const receiver = [];
 export default {
   name: "Center",
   methods: {
-    onDrop(evt, content) {
-      console.log(content);
+    onDrop(evt, item) {
+      console.log(item);
+     console.log(this.$store.state.store);
     //   const itemID = evt.dataTransfer.getData("itemID");
     //   const item = this.content.find((item) => item.id == itemID);
-    //   item.content = content;
+    //   item.content = item;
     },
   },
 };

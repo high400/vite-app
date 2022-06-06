@@ -26,7 +26,12 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
 
 <!-- This is where we write our templates -->
 <!-- This is where you write the script for JSON standards -->
-<script></script>
+<script>
+import { useStore } from "vuex";
+import { onMounted, ref } from "vue";
+const store = useStore();
+const toggle = ref(1);
+</script>
 
 <!-- This is where you write the script for JSON standards -->
 <!-- This is where you style your file -->
@@ -42,11 +47,10 @@ Check out https://vuejs.org/api/sfc-script-setup.html#script-setup -->
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 90vh;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
 }
 .head {
-  background-color: #FFFFFF;
-  
+  background-color: #ffffff;
 }
 </style>
 <!-- This is where you style your file -->

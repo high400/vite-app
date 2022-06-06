@@ -1,7 +1,12 @@
 import { createStore } from "vuex";
-const store =
-  createStore[
-    ({
+import { createApp } from 'vue'; 
+
+const store = createStore({
+  state () {
+    return {
+      count: 0,
+      data:[
+		{
       id: 1,
       name: "heading",
       title: "Heading Element",
@@ -51,23 +56,27 @@ const store =
       title: "Products",
       settings: {},
       style: {},
-    })
-  ];
-export default createStore({
-  name: "Content",
-  props: {
-    id: 1,
-  },
-  state: {
-    //   change the state here
-
+    }
+	  ],
+      toggle:1
+    }
   },
   mutations: {
-    //   The mutation is here
+    increment (state,payload) {
+      state.count++
+    },
+    setData(state,payload){
+      state.data = payload
+    },
+    setToggle (state,payload) {
+      state.toggle = payload
+    }
   },
-  action: {
-    //   take the action
-  },
-  modules: {},
-  getters: {},
+  actions: {
+      fetchData({commit},payload) {
+        console.log(payload);
+      }
+  }
 });
+export default store;
+  
