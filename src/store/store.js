@@ -54,9 +54,13 @@ const store =
     })
   ];
 export default createStore({
+  name: "Content",
+  props: {
+    id: 1,
+  },
   state: {
     //   change the state here
-    
+
   },
   mutations: {
     //   The mutation is here

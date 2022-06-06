@@ -9,13 +9,13 @@
 <script>
 const receiver = [];
 export default {
-
   name: "Center",
   methods: {
-    onDrop(evt, list) {
-      const itemID = evt.dataTransfer.getData("itemID");
-      const item = this.items.find((item) => item.id == itemID);
-      item.list = list;
+    onDrop(evt, content) {
+      console.log(content);
+    //   const itemID = evt.dataTransfer.getData("itemID");
+    //   const item = this.content.find((item) => item.id == itemID);
+    //   item.content = content;
     },
   },
 };
