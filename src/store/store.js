@@ -8,7 +8,16 @@ const store = createStore({
       data: [
         {
           id: 1,
-
+          name: "heading",
+          title: "Heading Element",
+          settings: {
+            content: "Enter your heading text",
+            tag: "h3",
+          },
+          style: {
+            color: "red",
+            fontSize: "14px",
+          },
         },
         {
           id: 2,
@@ -49,9 +58,7 @@ const store = createStore({
           style: {},
         },
       ],
-      content: [
-        
-      ],
+      content: [],
       toggle: 1,
     };
   },
@@ -59,16 +66,10 @@ const store = createStore({
     increment(state) {
       state.count++;
     },
-    setData(state, payload) {
-     
-    },
-    setToggle(state, payload) {
-      
-    },
+    setData(state, payload) {},
+    setToggle(state, payload) {},
   },
-  actions: {
-
-  },
+  actions: {},
   getters: {},
 });
 export default store;
