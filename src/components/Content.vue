@@ -120,7 +120,7 @@ export default {
   background-color: #e5e7eb;
 }
 .zone {
-  background-color: #2f4f4f;
+  background-color: #ffffff;
   height: 95%;
 }
 p {

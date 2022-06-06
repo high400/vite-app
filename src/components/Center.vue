@@ -9,6 +9,7 @@
 <script>
 const receiver = [];
 export default {
+
   name: "Center",
   methods: {
     onDrop(evt, list) {
