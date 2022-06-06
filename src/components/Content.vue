@@ -58,7 +58,7 @@ export default {
         title: "Featured Element",
         settings: {
           content: {
-            img: "",
+            img: "../assets/Quang_Trung.png",
             text: "",
             button: "Read More",
           },
@@ -104,7 +104,6 @@ export default {
 
   methods: {
     startDrag(evt, item) {
-      console.log(item);
       evt.dataTransfer.dropEffect = "move";
       evt.dataTransfer.effectAllowed = "move";
       evt.dataTransfer.setData("itemID", item.id);
