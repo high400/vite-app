@@ -2,9 +2,17 @@
   <div class="content h-screen p-2">
     <div class="flex gap-1 justify-between">
       <div class="h-screen w-1/4">
-        <div class="grid grid-cols-3 gap-1 p-2 ">
-          <div v-for="item in content" :key="item.id" class="bg-white h-[100px] flex items-center justify-center">
-            <p class="p-2">{{ item.title }}</p>
+        <div class="grid grid-cols-3 gap-1 p-2">
+          <div
+            v-for="item in content"
+            :key="item.id"
+            class="bg-white h-[100px] flex items-center justify-center"
+            draggable
+            @dragstart="startDrag($event, item)"
+          >
+            <p class="p-2">
+              {{ item.title }}
+            </p>
           </div>
         </div>
       </div>
@@ -27,7 +35,7 @@ import { computed, ref } from "vue";
 export default {
   components: {
     Center,
-    Right, 
+    Right,
   },
   setup() {
     const content = ref([
@@ -93,6 +101,19 @@ export default {
       content,
     };
   },
+
+  methods: {
+    startDrag(evt, item) {
+      evt.dataTransfer.dropEffect = "move";
+      evt.dataTransfer.effectAllowed = "move";
+      evt.dataTransfer.setData("itemID", item.id);
+    },
+    onDrop(evt, list) {
+      const itemID = evt.dataTransfer.getData("itemID");
+      const item = this.items.find((item) => item.id == itemID);
+      item.list = list;
+    },
+  },
 };
 </script>
 
@@ -102,14 +123,12 @@ export default {
 }
 .grid {
   background-color: #e5e7eb;
-  
 }
 .zone {
   background-color: #2f4f4f;
   height: 95%;
 }
-p { 
+p {
   font-size: 16px;
-
 }
 </style>
