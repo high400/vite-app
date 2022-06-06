@@ -4,9 +4,7 @@
     @drop="onDrop($event, 1)"
     @dragover.prevent
     @dragenter.prevent
-  >
-    <img class="pic" src="../assets/Quang_Trung.png" />
-  </div>
+  ></div>
 </template>
 <script>
 const receiver = [];
@@ -17,7 +15,6 @@ export default {
       const itemID = evt.dataTransfer.getData("itemID");
       const item = this.items.find((item) => item.id == itemID);
       item.list = list;
-    
     },
   },
 };
