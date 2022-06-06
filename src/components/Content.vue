@@ -7,7 +7,7 @@
             v-for="item in content"
             :key="item.id"
             class="bg-white h-[100px] flex items-center justify-center"
-            draggable
+            draggable="true"
             @dragstart="startDrag($event, item)"
           >
             <p class="p-2">
@@ -107,11 +107,6 @@ export default {
       evt.dataTransfer.dropEffect = "move";
       evt.dataTransfer.effectAllowed = "move";
       evt.dataTransfer.setData("itemID", item.id);
-    },
-    onDrop(evt, list) {
-      const itemID = evt.dataTransfer.getData("itemID");
-      const item = this.items.find((item) => item.id == itemID);
-      item.list = list;
     },
   },
 };
